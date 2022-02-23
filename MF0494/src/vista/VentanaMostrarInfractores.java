@@ -25,6 +25,8 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.JTable;
 import java.awt.FlowLayout;
 import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaMostrarInfractores extends JFrame {
 
@@ -71,12 +73,13 @@ public class VentanaMostrarInfractores extends JFrame {
 		panel_1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
 		JButton btnNewButton = new JButton("Cerrar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+			}
+		});
 		panel_1.add(btnNewButton);
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		
-		JButton btnNewButton_1 = new JButton("Eliminar Infractor");
-		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		panel_1.add(btnNewButton_1);
 	}
 
 
